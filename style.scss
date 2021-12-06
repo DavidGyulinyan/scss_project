@@ -1,0 +1,322 @@
+/* fonts of the site */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+// general
+
+$col: #5D7B89;
+$boxWitdh: 420px;
+
+@mixin boxMixin {
+    width: 200px;
+    height: 230px;
+    padding: 10px;
+    text-align: center;
+    background: rgba(225, 225, 225, 0.1);
+	border-radius: 5px;
+}
+
+
+@mixin boxImgStyle {
+    height: 400px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: rgba(225, 225, 225, 0.1);
+	border-radius: 5px;
+
+    div {
+        width: inherit;
+        height: inherit;
+        text-align: center;
+        p {
+            margin-top: 20px;
+        }
+        }
+
+    img {
+        width: 400px;
+        height: 180px;
+        transition: .3s;
+        &:hover   {
+            transform: scale(0.99);
+    }
+    }
+}
+
+
+@mixin wdth {
+    padding: 20px;
+    width: 135px;
+    display: block;
+    
+    li {
+        font-size: 10px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(35,44,48,1) 40%, rgba(35,44,48,1) 63%, rgba(0,0,0,1) 100%);
+}
+
+
+// content
+
+a {
+    text-decoration: none;
+    color: #5D7B89;
+ }
+
+ li {
+     list-style-type: none;
+     color: $col;
+     font-family: 'Work Sans';
+ }
+
+p {
+    color: $col;
+    font-family: 'Work Sans';
+}
+
+@mixin btnMixin {
+    width: 100px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: rgb(225, 225, 225, 0.1);
+    box-shadow: 0 1px 2px 2px $col;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+.blocks {
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.blocks2 {
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+}
+
+button {
+    @include btnMixin();
+    transition: .3s;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.box {
+    @include boxMixin();
+    width : $boxWitdh;
+}
+
+.box1 {
+    @include boxMixin();
+    width : $boxWitdh;
+}
+
+.box2 {
+    @include boxMixin();
+    width : $boxWitdh;
+}
+
+header {
+    width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(35,44,48,1) 40%, rgba(35,44,48,1) 63%, rgba(0,0,0,1) 100%);
+
+   .List {
+       width: 50%;
+       display: flex;
+       justify-content: flex-start;
+       align-items: center;
+       margin-top: 30px;
+   }
+
+   
+   ul {
+       list-style: none;
+       
+       li{
+           @include wdth();
+           transition: .3s;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+       &:hover li {
+           transform: scale(1.1);
+       }
+   }
+
+   a {
+       text-decoration: none;
+       font-size: 20px;
+       color: $col
+    }
+}
+
+
+.boxImg {
+    @include boxImgStyle();
+    width : $boxWitdh;
+}
+
+.boxImg1 {
+    @include boxImgStyle();
+    width : $boxWitdh;
+}
+
+.boxImg2 {
+    @include boxImgStyle();
+    width : $boxWitdh;
+}
+
+.boxImg3 {
+    @include boxImgStyle();
+    width : $boxWitdh;
+}
+
+.boxImg4 {
+    @include boxImgStyle();
+    width : $boxWitdh;
+}
+
+.boxImg5 {
+    @include boxImgStyle();
+    width : $boxWitdh;
+}
+
+    /* page section  */
+    
+    .wordResume {
+    
+      margin-top: 100px;
+      width: 100%;
+      height: 100px;
+      font-family: 'Work Sans';
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      h1 {
+          color: $col;
+      }
+    }
+    
+    .experieceSec {
+      width: 100%;
+      height: 50px;
+      font-family: 'Work Sans';
+      display: grid;
+      grid-template-columns: 1fr 1fr 3fr;
+      margin-top: 60px;
+    }
+    
+    .workExpTxt {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      font-family: 'Work Sans';
+    }
+    
+    
+    .profWord {
+      font-weight: bold;
+      font-family: 'Work Sans';
+    }
+    
+    .txtSecWork {
+      display: grid;
+      grid-template-columns: 1fr 1fr 3fr;
+      margin-bottom: 65px;
+      font-family: 'Work Sans';
+      span {
+        padding: 25px;
+        color: $col;
+      }
+    }
+    
+    
+    .skillTxt{
+      li {
+      list-style-type: disc;
+      margin-top: 10px;
+      font-family: 'Work Sans';
+      font-weight: lighter;
+      }
+    }
+
+
+/* footer section  */
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 100px auto;
+  }
+  
+  .footerInfo {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Work Sans';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slimWordsInfo {
+    font-size: 14px;
+    font-weight: lighter;
+    font-family: 'Work Sans';
+  }
+  
+  .emailLink {
+    font-size: 14px;
+    font-weight: lighter;
+    font-family: 'Work Sans';
+  }
+  
+  .followMe {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .icons {
+    width: 170px;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .icons i {
+    transition: .3s;
+  }
+  
+  .icons i:hover {
+    transform: scale(1.2);
+  }
+  
+  .by li {
+    font-size: 14px;
+    font-weight: lighter;
+  }
+
+  hr {
+      width: 98%;
+      margin: auto;
+      margin-top: 20px;
+  }
